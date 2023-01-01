@@ -2,6 +2,7 @@ import Main from '../components/Main';
 import '../components/css/App.css';
 import { Routes, Route } from 'react-router-dom';
 import Footer from '../components/Footer';
+import Channels from '../components/Channels';
 
 function App() {
   return (
@@ -15,6 +16,10 @@ function App() {
         <Route exact path="/register"
           element={<Main 
             regOrLogin="register"/>}/>
+
+        <Route exact path="/channels"
+          element={<Channels />}/>
+
       </Routes>
 
       <Footer></Footer>
