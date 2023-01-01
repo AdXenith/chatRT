@@ -11,19 +11,19 @@ function Channels() {
 
                 <div className="flex flex-row bg-lightgray rounded-l-full rounded-r-full w-8/12 mb-4">
                     <img src="/image.png" className="w-20 flex-none" />
-                    <p className="text-2xl my-auto pl-6 text-white font-light w-9/12">Pizza Party Hangout</p>
-                    <a className="hover:cursor-pointer w-10 my-auto "><img src="/kebab.png"></img></a>
+                    <p className="text-2xl my-auto pl-6 text-white font-light w-[79.5%]">Pizza Party Hangout</p>
+                    <a className="hover:cursor-pointer w-10 my-auto"><img src="/kebab.png"></img></a>
                 </div>
 
                 <div className="flex flex-row bg-lightgray rounded-l-full rounded-r-full w-8/12 mb-4">
                     <img src="/image.png" className="w-20" />
-                    <p className="text-2xl my-auto pl-6 text-white font-light w-9/12">Backyard Hooligans</p>
+                    <p className="text-2xl my-auto pl-6 text-white font-light w-[79.5%]">Backyard Hooligans</p>
                     <a className="hover:cursor-pointer w-10 my-auto"><img src="/kebab.png"></img></a>
                 </div>
                 
                 <div className="flex flex-row bg-lightgray rounded-l-full rounded-r-full w-8/12 mb-4">
                     <img src="/image.png" className="w-20" />
-                    <p className="text-2xl my-auto pl-6 text-white font-light w-9/12">Class 9B</p>
+                    <p className="text-2xl my-auto pl-6 text-white font-light w-[79.5%]">Class 9B</p>
                     <a className="hover:cursor-pointer w-10 my-auto"><img src="/kebab.png"></img></a>
                 </div>
             </div>
