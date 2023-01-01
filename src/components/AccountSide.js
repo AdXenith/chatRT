@@ -6,7 +6,7 @@ function AccountSide() {
             <img src="/image.png" className="w-28 mx-auto pt-16" />
             <p className="text-center text-white text-2xl font-light w-2/3 mx-auto">Jim Bomersville</p>
 
-            <a href="" className="text-orange underline text-center text-xl mt-9 w-fit mx-auto">settings</a>
+            <a href="/" className="text-orange underline text-center text-xl mt-9 w-fit mx-auto">settings</a>
             <a href="" className="text-orange underline text-center text-xl mt-1 w-fit mx-auto">log out</a>
         </div>
      );
