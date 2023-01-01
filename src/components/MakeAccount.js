@@ -1,10 +1,22 @@
 import React from 'react';
 
-function MakeAccount() {
+function MakeAccount({regOrLogin}) {
+
+    let bool;
+
+    if (regOrLogin === "login") {
+        bool = true;
+    } else {
+        bool = false;
+    }
+
     return ( 
-        <div className='mt-6'>
+        (bool) ? <div className='mt-6'>
             <p className=''>new?</p>
-            <a href='' className='text-orange underline'>make an account</a>
+            <a href='/register' className='text-orange underline'>make an account</a>
+        </div> : 
+        <div className='mt-6'>
+            <a href='/' className='text-orange underline'>have an account?</a>
         </div>
      );
 }
