@@ -2,8 +2,8 @@ import React from 'react';
 
 function WelcomeHeader({ regOrLogin }) {
     return (  
-        <h1>
-            welcome to <span className='titleColor'>chatRT</span>! <br/>
+        <h1 className='font-light text-4xl'>
+            welcome to <span className='text-orange'>chatRT</span>! <br/>
             please {regOrLogin}:
         </h1>
     );

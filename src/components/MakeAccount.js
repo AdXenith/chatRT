@@ -2,9 +2,9 @@ import React from 'react';
 
 function MakeAccount() {
     return ( 
-        <div>
-            <p>new?</p>
-            <a className='text-orange'>make an account</a>
+        <div className='mt-6'>
+            <p className=''>new?</p>
+            <a href='' className='text-orange underline'>make an account</a>
         </div>
      );
 }
