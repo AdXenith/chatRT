@@ -1,10 +1,15 @@
 import React from 'react';
 import AccountSide from './AccountSide';
+import { pb, currentUser } from '../pocketbase';
 
-function Channels() {
+function Channels({ currentUser, setCurrentUser }) {
+
+    console.log(currentUser);
+
     return ( 
         <div className="w-11/12 mx-auto flex flex-row">
-            <AccountSide />
+            <AccountSide 
+                currentUser={currentUser}/>
             <div className="w-10/12 pl-24 pt-20">
                 <h2 className="text-orange text-left text-2xl font-light">CHANNELS</h2>
                 <hr className='text-lightgray mt-2 mb-4 w-80'></hr>

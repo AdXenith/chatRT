@@ -1,7 +1,7 @@
 import React from 'react';
-import { pb } from '../pocketbase';
+import { pb, currentUser } from '../pocketbase';
 
-function LoginForm({regOrLogin, setToast, setToast2}) {
+function LoginForm({regOrLogin, setToast, setToast2, setCurrentUser}) {
 
     var username, password, email;
 
@@ -14,10 +14,11 @@ function LoginForm({regOrLogin, setToast, setToast2}) {
     async function login() {
         try {
             const authData = await pb.collection('users').authWithPassword(email, password);
-            console.log(pb.authStore.isValid);
+            setCurrentUser(currentUser);
+            /*console.log(pb.authStore.isValid);
             console.log(pb.authStore.token);
             console.log(pb.authStore.model.id);
-            pb.authStore.clear();
+            pb.authStore.clear();*/
         } catch (error) {
             console.error(error);
             setToast("");
