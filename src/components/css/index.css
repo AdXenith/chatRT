@@ -14,3 +14,13 @@ body {
   margin: 0;
   background-color: var(--gray);
 }
+
+.chat-container {
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+}
+
+.chat-container::-webkit-scrollbar { /* WebKit */
+  width: 0px;
+}

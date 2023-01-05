@@ -1,8 +1,8 @@
 import React from 'react';
 
-function AccountSide({ currentUser, setCurrentUser }) {
+function AccountSide({ currentUser }) {
     return ( 
-        <div className="container border-x border-lightgray bg-black flex flex-col justify-center pt-32 pb-96 w-80 -mt-12">
+        <div className="container border-x border-lightgray bg-black flex flex-col justify-center pt-32 pb-96 w-1/5 ml-16 -mt-12">
             <img src="/image.png" className="w-28 mx-auto pt-16" alt='profile picture'/>
             <p className="text-center text-white text-2xl font-light w-2/3 mx-auto">{currentUser.username}</p>
 

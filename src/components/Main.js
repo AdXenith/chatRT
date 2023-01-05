@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import Channels from './Channels';
+import Chat from './Chat';
 import Landing from './Landing';
 
 function Main({regOrLogin, currentUser, setCurrentUser}) {
+
+    const [chatSelected, setChatSelected] = useState();
 
     return ( 
         <main>
@@ -13,9 +16,16 @@ function Main({regOrLogin, currentUser, setCurrentUser}) {
                     regOrLogin={regOrLogin}
                     setCurrentUser={setCurrentUser} />
                 :
-                <Channels
+                (chatSelected != null)
+                    ?
+                    <Chat
+                        currentUser={currentUser}
+                        chatSelected={chatSelected} />
+                    :
+                    <Channels
                     currentUser={currentUser}
-                    setCurrentUser={setCurrentUser} />
+                    setCurrentUser={setCurrentUser}
+                    setChatSelected={setChatSelected} />
             }
         </main>
      );
