@@ -78,7 +78,7 @@ function Chat({ currentUser, chatSelected }) {
                 <div className="flex flex-row relative rounded-full border-t border-black">
                     <img src="/image.png" className="w-14 flex-none absolute" />
                     <form onSubmit={sendMessage} className="flex flex-row h-14 w-full">
-                        <input type={'text'} id='message' className="pl-16 pr-16 w-full text-white bg-lightgray rounded-full" placeholder="Send a message..." required></input>
+                        <input type={'text'} id='message' className="pl-16 pr-16 w-full text-white bg-lightgray rounded-full break-words" maxLength={"400"} placeholder="Send a message..." required></input>
 
                         <input type={'image'} src="/send.png" alt='submit' id='send' className="w-14 absolute right-0 opacity-60 hover:opacity-100 hover:outline hover:outline-2 hover:outline-white rounded-full"></input>
                     </form>
