@@ -2,7 +2,7 @@ import React, { Fragment, useEffect, useState } from 'react';
 import { pb } from '../pocketbase';
 import AccountSide from './AccountSide';
 
-function Chat({ currentUser, chatSelected }) {
+function Chat({ currentUser, chatSelected, setChatSelected }) {
 
     const [chats, setChats] = useState([]);
 
@@ -59,6 +59,7 @@ function Chat({ currentUser, chatSelected }) {
                 <div className="flex flex-row bg-lightgray rounded-l-full rounded-r-full border-b border-b-black">
                         <img src="/image.png" className="w-16 flex-none" />
                         <p className="text-2xl my-auto pl-6 text-white font-semibold w-[79.5%]">{chatSelected.name}</p>
+                        <span className='hover:cursor-pointer text-white mt-5' onClick={() => setChatSelected(null)}>go back</span>
                 </div>
 
                 <div id='chat-container' className='chat-container h-[42rem]'>

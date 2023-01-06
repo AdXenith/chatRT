@@ -20,7 +20,8 @@ function Main({regOrLogin, currentUser, setCurrentUser}) {
                     ?
                     <Chat
                         currentUser={currentUser}
-                        chatSelected={chatSelected} />
+                        chatSelected={chatSelected}
+                        setChatSelected={setChatSelected} />
                     :
                     <Channels
                     currentUser={currentUser}
