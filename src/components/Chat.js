@@ -8,28 +8,28 @@ function Chat({ currentUser, chatSelected }) {
 
     async function fetchChats(){
         setChats(await pb.collection('messages').getList(1,50, {
-            sort: 'created',
+            sort: '-created',
             filter: 'channel = "' + chatSelected.id + '"',
             expand: 'user',
-        }), []);
+        }));
     }
 
     function updateScroll(){
-        var element = document.getElementById("yourDivID");
-        element.scrollTop = element.scrollHeight;
+        var element = document.getElementById("dummy");
+        element.scrollIntoView({block: 'end', behavior: 'smooth'});
     }
     
     useEffect(() => {
 
         if (chats.length == 0) { 
             fetchChats();
-            
         };
 
         pb.collection('messages').subscribe('*', async function(e) {
-            console.log(e);
             fetchChats();
+            updateScroll();
         })
+
     });
 
     async function sendMessage(e) {
@@ -44,6 +44,7 @@ function Chat({ currentUser, chatSelected }) {
             const record = await pb.collection('messages').create(data);
 
             document.getElementById('message').value = "";
+            updateScroll();
           } catch (error) {
             console.error(error);
         }
@@ -60,11 +61,11 @@ function Chat({ currentUser, chatSelected }) {
                         <p className="text-2xl my-auto pl-6 text-white font-semibold w-[79.5%]">{chatSelected.name}</p>
                 </div>
 
-                <div className='chat-container h-[42rem] pb-16'>
+                <div id='chat-container' className='chat-container h-[42rem]'>
 
                     { (chats.length == 0) ? null :
                     
-                    Object.entries(chats)[4][1].map(chat => 
+                    Object.entries(chats)[4][1].slice(0).reverse().map(chat => 
                         <div className="container pt-6 relative">
                             <img src="/image.png" className="w-8 h-8 ml-4 absolute bottom-0" />
                             <div className="max-w-[75%] text-white bg-lightgray rounded-lg p-2 ml-14 h-fit">
@@ -72,6 +73,9 @@ function Chat({ currentUser, chatSelected }) {
                                 <p className='break-words'>{chat.text}</p>
                             </div>
                         </div>) }
+
+                    <div id='dummy' className='mt-24'>
+                    </div>
 
                 </div>
 
