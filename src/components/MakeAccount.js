@@ -12,11 +12,11 @@ function MakeAccount({regOrLogin}) {
 
     return ( 
         (bool) ? <div className='mt-6'>
-            <p className=''>new?</p>
-            <a href='/register' className='text-orange underline'>make an account</a>
+            <p className='text-3xl lg:text-base'>new?</p>
+            <a href='/register' className='text-orange underline text-3xl lg:text-base'>make an account</a>
         </div> : 
         <div className='mt-6'>
-            <a href='/' className='text-orange underline'>have an account?</a>
+            <a href='/' className='text-orange underline text-3xl lg:text-base'>have an account?</a>
         </div>
      );
 }

@@ -9,7 +9,7 @@ function App() {
   const [currentUser, setCurrentUser] = useState("");
 
   return (
-    <div className="flex flex-col justify-center w-screen h-screen">
+    <div className="flex flex-col lg:justify-center w-screen lg:h-screen">
       
       <Routes>
         <Route exact path="/" 

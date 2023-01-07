@@ -61,24 +61,24 @@ function LoginForm({regOrLogin, setToast, setToast2, setCurrentUser}) {
     }
 
     return ( 
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="flex flex-col justify-center">
             {
                 (showUsername) ? <div className='flex flex-col'>
-                <label className="text-left ml-2 text-lg" htmlFor="username">username</label>
-                <input className="bg-black rounded-xl min-w-fit h-12 px-2 pb-1" type={'text'} id="username" required></input>
+                <label className="text-left ml-2 text-3xl lg:text-lg" htmlFor="username">username</label>
+                <input className="bg-black rounded-xl text-4xl lg:text-base  min-w-fit h-24 lg:h-12 px-2 pb-1" type={'text'} id="username" required></input>
                 </div> : null
             }            
             <div className='flex flex-col'>
-            <label className="text-left ml-2 text-lg" htmlFor="email">email</label>
-            <input className="bg-black rounded-xl min-w-fit h-12 px-2 pb-1" type={'text'} id="email" placeholder="example@email.com" required></input>
+            <label className="text-left ml-2 text-3xl lg:text-lg" htmlFor="email">email</label>
+            <input className="bg-black text-4xl lg:text-base rounded-xl min-w-fit h-24 lg:h-12 px-2 pb-1" type={'text'} id="email" placeholder="example@email.com" required></input>
             </div>
 
             <div className='flex flex-col'>
-            <label className="text-left ml-2 text-lg" htmlFor="password">password</label>
-            <input className="bg-black rounded-xl min-w-fit h-12 px-2 pb-1" type={'password'} id="password" minLength="8" placeholder={(showUsername) ? "Password must be 8 or more characters." : null} required></input>
+            <label className="text-left ml-2 text-3xl lg:text-lg" htmlFor="password">password</label>
+            <input className="bg-black rounded-xl text-4xl lg:text-base min-w-fit h-24 lg:h-12 px-2 pb-1" type={'password'} id="password" minLength="8" placeholder={(showUsername) ? "Password must be 8 or more characters." : null} required></input>
             </div>
-
-            <input className="bg-orange rounded-xl h-10 w-80 mt-8 text-lg hover:bg-orangedark hover:cursor-pointer" type={'submit'} value={regOrLogin}></input>
+            
+            <input className="bg-orange rounded-xl mx-auto h-20 lg:h-10 w-80 mt-8 text-3xl lg:text-lg hover:bg-orangedark hover:cursor-pointer" type={'submit'} value={regOrLogin}></input>
         </form>
      );
 }

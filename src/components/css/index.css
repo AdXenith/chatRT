@@ -19,6 +19,7 @@ body {
   overflow-y: scroll;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none;  /* IE 10+ */
+  height: calc(100% - 10rem);
 }
 
 .chat-container::-webkit-scrollbar { /* WebKit */
